@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet";
+
 /**
  * NotFound component that displays a 404 error message.
  *
