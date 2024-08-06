@@ -8,14 +8,14 @@ import {
   ServicePage,
   NotFoundPage,
 } from "./pages";
-import Layout from "./components";
+import Layout from "./components/Layout";
 import "./App.css";
 
 /**
  * Root component of the application.
  *
  * @component
- * @returns {JSX.Element} The rendered root component.
+ * @returns {TSX.Element} The rendered root component.
  */
 function App() {
   return (
