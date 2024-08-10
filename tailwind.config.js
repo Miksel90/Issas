@@ -2,9 +2,9 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    maxWidth: {
-      app: "1920px",
-    },
+    // maxWidth: {
+    //   app: "1920px",
+    // },
     screens: {
       xxs: "200px",
       xs: "400px",

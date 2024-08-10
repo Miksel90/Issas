@@ -1,27 +1,43 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import HamburgerButton from "../../Buttons/Hamburger";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 const HeaderNavigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const menuRef = useRef<HTMLUListElement | null>(null);
+  const dropdownRef = useRef<HTMLUListElement | null>(null);
   const location = useLocation();
 
   /**
-   * Toggles the menu open or closed.
+   * Toggles the main menu open or closed.
    */
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prev) => !prev);
   };
 
   /**
-   * Handles clicks outside the menu to close it.
+   * Toggles the dropdown menu open or closed.
+   */
+  const toggleDropdown = () => {
+    setIsDropdownOpen((prev) => !prev);
+  };
+
+  /**
+   * Handles clicks outside the menu and dropdown to close them.
    *
    * @param {MouseEvent} event - The event object.
    */
   const handleClickOutside = (event: MouseEvent) => {
     if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
       setIsMenuOpen(false);
+    }
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
+      setIsDropdownOpen(false);
     }
   };
 
@@ -32,17 +48,24 @@ const HeaderNavigation = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // Close menu and dropdown on route change
+    setIsMenuOpen(false);
+    setIsDropdownOpen(false);
+  }, [location.pathname]);
+
   const isActivePage = (path: string): string =>
     location.pathname === path
-      ? "underline"
+      ? "underline font-bold"
       : "hover:underline hover:font-bold";
 
   return (
-    <nav className="bg-primary font-condensed w-full relative" ref={menuRef}>
+    <nav className="bg-primary font-condensed w-full relative">
       <div className="lg:hidden">
         <HamburgerButton isMenuOpen={isMenuOpen} onClick={toggleMenu} />
       </div>
       <ul
+        ref={menuRef}
         className={`lg:flex lg:flex-row lg:static lg:w-auto lg:p-0 lg:shadow-none lg:bg-transparent bg-white md:rounded-md
           ${
             isMenuOpen ? "block" : "hidden"
@@ -68,11 +91,24 @@ const HeaderNavigation = () => {
             About
           </Link>
         </li>
-        <li className="relative py-2 px-5 group">
-          <Link to="/contact" className={isActivePage("/contact")}>
+        <li className="relative py-2 px-5">
+          <button
+            className={` flex flex-row items-center gap-1 w-full text-left ${isActivePage(
+              "/contact"
+            )}`}
+            onClick={toggleDropdown}
+          >
             Contact
-          </Link>
-          <ul className="absolute right-0 top-full mt-2 bg-white text-black shadow-md rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <IoMdArrowDropdown />
+          </button>
+          <ul
+            ref={dropdownRef}
+            className={`absolute right-0 top-full mt-2 bg-white text-black shadow-md rounded-md transition-opacity duration-300 ${
+              isDropdownOpen
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
+            }`}
+          >
             <li className="py-2 px-4 hover:underline hover:font-bold">
               <Link to="/contact">Contact</Link>
             </li>
