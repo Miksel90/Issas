@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet";
 
 const HomePage = () => {
   return (
-    <div className="w-full flex items-center bg-black">
+    <div className="w-full flex flex-column bg-black">
       <Helmet>
         <title>Home | ISSAS</title>
       </Helmet>
