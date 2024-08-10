@@ -13,9 +13,11 @@ import { Outlet } from "react-router-dom";
  */
 const Layout = () => {
   return (
-    <div>
+    <div className="bg-primary w-full flex flex-col min-h-screen">
       <Header />
-      <Outlet />
+      <main className="flex-grow">
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );

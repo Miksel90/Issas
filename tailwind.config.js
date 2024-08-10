@@ -14,13 +14,16 @@ export default {
       xl: "1000px",
     },
     colors: {
-      primary: "#fe6601",
+      primary: "#fffff0",
+      white: "#ffffff",
+      black: "#000000",
       secondary: "#f2f2f2",
       danger: "#ff0000",
       success: "#00ff00",
     },
     spacing: {
       0: "0rem",
+      0.5: "0.125rem",
       1: "0.25rem",
       2: "0.5rem",
       3: "0.75rem",
