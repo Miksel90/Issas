@@ -67,22 +67,22 @@ const HeaderNavigation: React.FC = () => {
       >
         <li className="py-2 px-5">
           <Link to="/" className={isActivePage("/")}>
-            Home
+            Hjem
           </Link>
         </li>
         <li className="py-2 px-5">
           <Link to="/services" className={isActivePage("/services")}>
-            Services
+            Tjenester
           </Link>
         </li>
         <li className="py-2 px-5">
           <Link to="/projects" className={isActivePage("/projects")}>
-            Projects
+            Prosjekter
           </Link>
         </li>
         <li className="py-2 px-5">
           <Link to="/about" className={isActivePage("/about")}>
-            About
+            Om Oss
           </Link>
         </li>
         <li className="relative py-2 px-5">
@@ -92,7 +92,7 @@ const HeaderNavigation: React.FC = () => {
             )}`}
             onClick={toggleDropdown}
           >
-            Contact
+            Kontakt Oss
             <IoMdArrowDropdown />
           </button>
           <ul
@@ -104,10 +104,10 @@ const HeaderNavigation: React.FC = () => {
             }`}
           >
             <li className="py-2 px-4 hover:underline hover:font-bold">
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact">Kontakt Oss</Link>
             </li>
             <li className="py-2 px-4 hover:underline hover:font-bold">
-              <Link to="/contactPeople">Management</Link>
+              <Link to="/contactPeople">Kontaktpersoner</Link>
             </li>
           </ul>
         </li>

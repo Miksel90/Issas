@@ -2,9 +2,9 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    // maxWidth: {
-    //   app: "1920px",
-    // },
+    maxWidth: {
+      app: "1920px",
+    },
     screens: {
       xxs: "200px",
       xs: "400px",
@@ -47,7 +47,14 @@ export default {
       21: "7.5rem",
       22: "8rem",
     },
-    extend: {},
+    extend: {
+      textShadow: {
+        sm: "1px 1px 2px rgba(0, 0, 0, 0.5)",
+        md: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+        lg: "3px 3px 6px rgba(0, 0, 0, 0.5)",
+        xl: "10px 10px 16px rgba(0, 0, 0, 0.8)",
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-textshadow")],
 };

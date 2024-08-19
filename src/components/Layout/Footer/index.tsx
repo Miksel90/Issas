@@ -22,11 +22,12 @@ const Footer = () => {
           />
           <div className="px-2 py-2">
             <p>
-              Established in 1996, ISSAS has grown significantly over time and
-              has become one of the country's leading specialists in flooring
-              for retail stores, office buildings, and commercial premises. We
-              offer only the best types of flooring and carpets, as well as
-              providing the most professional workers.
+              Etablert i 1996, med fokus på gulvlegging har ISSAS vokst
+              betydelig, og har med tiden formet seg til å bli en av landets
+              fremste spesialister på gulv til butikker, kontorbygg og
+              næringslokaler. ISSAS er en familiestyrt gulvleggerbedrift med
+              stor tyngde innenfor vårt fagfelt. Vi tilbyr kun de beste typer av
+              gulv og tepper, samt leverer de mest profesjonelle gulvleggere.
             </p>
           </div>
         </div>

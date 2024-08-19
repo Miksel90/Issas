@@ -1,11 +1,11 @@
 import { IoPhonePortraitSharp } from "react-icons/io5";
-import { CiMail } from "react-icons/ci";
+import { IoMailSharp } from "react-icons/io5";
 
 const ContactContainer = () => {
   return (
     <div className="w-full hidden md:flex bg-black p-2 space-x-8 justify-evenly">
       <div className="flex items-center text-white text-xl">
-        <CiMail size={24} className="text-white mr-2" />
+        <IoMailSharp size={24} className="text-white mr-2" />
         <span>Post@issas.no</span>
       </div>
       <div className="flex items-center text-white text-xl">
