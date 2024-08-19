@@ -7,6 +7,7 @@ import {
   ProjectPage,
   ServicePage,
   NotFoundPage,
+  PersonvernPage,
 } from "./pages";
 import Layout from "./components/Layout";
 import "./App.css";
@@ -30,6 +31,7 @@ function App() {
             <Route path="contact" element={<ContactPage />} />
             <Route path="contactPeople" element={<ContactPeoplePage />} />
             <Route path="*" element={<NotFoundPage />} />
+            <Route path="personvern" element={<PersonvernPage />} />
           </Route>
         </Routes>
       </>
