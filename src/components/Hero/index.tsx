@@ -3,7 +3,7 @@ import heroImage from "../../assets/Images/IssasHero.webp";
 import DefaultButton from "../Buttons/DefaultButton";
 
 const Hero = () => {
-  const navigate = useNavigate(); // Hook to navigate programmatically
+  const navigate = useNavigate();
 
   const handleClick = () => {
     navigate("/contact");

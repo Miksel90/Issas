@@ -15,11 +15,14 @@ export default {
     },
     colors: {
       primary: "#fffff0",
+      grey: "#222222",
       white: "#ffffff",
       black: "#000000",
       secondary: "#f2f2f2",
       danger: "#ff0000",
       success: "#00ff00",
+      info: "#0000ff",
+      personvern: "#6488ea",
     },
     spacing: {
       0: "0rem",
@@ -46,6 +49,10 @@ export default {
       20: "7rem",
       21: "7.5rem",
       22: "8rem",
+      23: "8.5rem",
+      24: "9rem",
+      25: "9.5rem",
+      30: "30rem",
     },
     extend: {
       textShadow: {
