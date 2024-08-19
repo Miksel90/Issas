@@ -1,8 +1,7 @@
 interface HamburgerButtonProps {
   isMenuOpen: boolean;
-  onClick: () => void;
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void; // Accepts an event argument
 }
-
 /**
  * HamburgerButton component that renders a button to toggle a menu.
  *
