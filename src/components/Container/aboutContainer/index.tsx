@@ -4,8 +4,8 @@ import { FaTruck } from "react-icons/fa";
 
 const AboutContainer = () => {
   return (
-    <div className="flex flex-col mb-10 gap-10">
-      <h2 className="text-black text-2xl md:text-4xl mt-10 px-2 text-center">
+    <div className="flex flex-col mb-4 gap-10 shadow-sm shadow-black p-10">
+      <h2 className="text-black text-2xl md:text-4xl  px-2 text-center">
         Alt du trenger til ditt prosjekt
       </h2>
 
