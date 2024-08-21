@@ -51,7 +51,7 @@ const HeaderNavigation: React.FC = () => {
 
   const isActivePage = (path: string): string =>
     location.pathname === path
-      ? "underline font-bold"
+      ? "underline "
       : "hover:underline hover:font-bold";
 
   return (
