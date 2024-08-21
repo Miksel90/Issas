@@ -92,7 +92,7 @@ const HeaderNavigation: React.FC = () => {
             )}`}
             onClick={toggleDropdown}
           >
-            Kontakt Oss
+            Kontakt
             <IoMdArrowDropdown />
           </button>
           <ul
