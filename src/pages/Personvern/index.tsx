@@ -15,11 +15,11 @@ const PersonvernPage = () => {
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-3xl font-bold">Personvern</h1>
+          <h1 className="text-3xl font-bold font-primary">Personvern</h1>
         </div>
       </div>
       <div className="container mx-auto px-4 py-8">
-        <h2 className="text-2xl font-bold mb-4">
+        <h2 className="text-2xl font-bold mb-4 font-primary">
           Samtykke til vår bruk av cookies
         </h2>
         <p className="mb-4">
@@ -30,7 +30,7 @@ const PersonvernPage = () => {
           nettstedet vårt, vil det trolig bety at nettstedet vårt ikke fungerer
           som du ville forvente.
         </p>
-        <h3 className="text-xl font-bold mb-2">
+        <h3 className="text-xl font-bold mb-2 font-primary">
           Cookies i bruk på dette nettstedet – hvorfor cookies?
         </h3>
         <p className="mb-4">
@@ -46,7 +46,7 @@ const PersonvernPage = () => {
           <li>Kontinuerlig forbedre nettstedet vårt for deg</li>
           <li>Gjøre vår markedsføring mer effektiv</li>
         </ul>
-        <h3 className="text-xl font-bold mb-2">
+        <h3 className="text-xl font-bold mb-2 font-primary">
           Vi bruker ikke informasjonskapsler til:
         </h3>
         <ul className="list-disc list-inside mb-4">
@@ -60,19 +60,25 @@ const PersonvernPage = () => {
           <li>Gi personlig identifiserte data til tredjeparter</li>
         </ul>
 
-        <h3 className="text-xl font-bold mb-2">Mer om våre cookies</h3>
+        <h3 className="text-xl font-bold mb-2 font-primary">
+          Mer om våre cookies
+        </h3>
         <p className="mb-4">
           Vi bruker informasjonskapsler for at nettstedet vårt skal fungere. Det
           er ingen måte å forhindre at disse informasjonskapslene blir satt
           annet enn å slutte å bruke nettstedet vårt.
         </p>
-        <h3 className="text-xl font-bold mb-2">Tredjepartsfunksjoner</h3>
+        <h3 className="text-xl font-bold mb-2 font-primary">
+          Tredjepartsfunksjoner
+        </h3>
         <p className="mb-4">
           Vår side, som de fleste nettsteder, inkluderer funksjonalitet levert
           av tredjepart. Vår side inkluderer for eksempel en innebygd
           YouTube-video.
         </p>
-        <h3 className="text-xl font-bold mb-2">Site Improvement Cookies</h3>
+        <h3 className="text-xl font-bold mb-2 font-primary">
+          Site Improvement Cookies
+        </h3>
         <p className="mb-4">
           Vi tester jevnlig nye design eller nettstedfunksjoner på nettstedet
           vårt. Vi gjør dette ved å vise de forskjellige versjonene av vår
@@ -80,7 +86,7 @@ const PersonvernPage = () => {
           besøkende benytter seg av de forskjellige versjonene. Til slutt
           hjelper dette oss med å tilby deg et bedre nettsted.
         </p>
-        <h3 className="text-xl font-bold mb-2">
+        <h3 className="text-xl font-bold mb-2 font-primary">
           Anonyme besøksstatistikk cookies
         </h3>
         <p className="mb-4">
@@ -95,7 +101,9 @@ const PersonvernPage = () => {
           og om de har vært her før. Disse opplysningene gir oss en bedre
           innsikt i hvilken type tjenester eller produkter som er mest populære.
         </p>
-        <h3 className="text-xl font-bold mb-2">Cookies i bruk på nettstedet</h3>
+        <h3 className="text-xl font-bold mb-2 font-primary">
+          Cookies i bruk på nettstedet
+        </h3>
         <ul className="list-disc list-inside mb-4">
           <li>
             _ga: Brukes for å skille brukere fra hverandre, varighet 30 dager.
@@ -115,8 +123,8 @@ const PersonvernPage = () => {
             wfvt_****: Brukes til å skille ekte besøkende fra spamroboter.
           </li>
         </ul>
-        <h3 className="text-xl font-bold mb-2">Persondata</h3>
-        <p className="mb-4">
+        <h3 className="text-xl font-bold mb-2 font-primary">Persondata</h3>
+        <p className="mb-4 ">
           <strong>Hva lagres?</strong>
           <br />
           Detaljer som navn, e-post og telefonnumre lagres i forbindelse med å
@@ -159,7 +167,7 @@ const PersonvernPage = () => {
           sitt gitte samtykke uten at det påvirker lovligheten av en behandling
           basert på et samtykke før samtykket trekkes tilbake.
         </p>
-        <h3 className="text-xl font-bold mb-2">Klager</h3>
+        <h3 className="text-xl font-bold mb-2 font-primary">Klager</h3>
         <p className="mb-4">
           Eventuelle klager på vår behandling av personopplysninger kan rettes
           til Datatilsynet.

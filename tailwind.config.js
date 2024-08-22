@@ -52,7 +52,11 @@ export default {
       23: "8.5rem",
       24: "9rem",
       25: "9.5rem",
+      26: "10rem",
+      27: "15rem",
+      28: "20rem",
       30: "30rem",
+      40: "40rem",
     },
     extend: {
       fontFamily: {

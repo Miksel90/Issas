@@ -13,7 +13,9 @@ const AboutContainer = () => {
         <div className="flex flex-col items-center md:items-start justify-center gap-2">
           <div className="flex items-center gap-4">
             <FaHouse size={50} className="text-danger" />
-            <p className="text-black text-2xl font-semibold">Vi tilbyr</p>
+            <p className="text-black text-2xl font-semibold font-primary">
+              Vi tilbyr
+            </p>
           </div>
           <p className="text-black md:w-64 text-lg text-center md:text-left">
             Vi gjør hele jobben! Rehabilitering og riving av gammelt gulv,
@@ -24,7 +26,9 @@ const AboutContainer = () => {
         <div className="flex flex-col items-center md:items-start justify-center gap-2">
           <div className="flex items-center gap-4">
             <FaInfoCircle size={50} className="text-success" />
-            <p className="text-black text-2xl font-semibold">Erfaring</p>
+            <p className="text-black text-2xl font-semibold font-primary">
+              Erfaring
+            </p>
           </div>
           <p className="text-black md:w-64 text-lg text-center md:text-left">
             Solid familiebedrift som har levert kvalitet siden 1996. Selskapet
@@ -35,7 +39,9 @@ const AboutContainer = () => {
         <div className="flex flex-col items-center md:items-start justify-center gap-2">
           <div className="flex items-center gap-4">
             <FaTruck size={50} className="text-info" />
-            <p className="text-black text-2xl font-semibold">Nasjonalt</p>
+            <p className="text-black text-2xl font-semibold font-primary">
+              Nasjonalt
+            </p>
           </div>
           <p className="text-black md:w-64 text-lg text-center md:text-left">
             Vi leverer i hele Norge. Hovedsaklig til bedrifter, kontorlokaler og

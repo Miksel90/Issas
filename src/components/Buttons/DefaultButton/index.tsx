@@ -17,8 +17,8 @@ const DefaultButton: React.FC<DefaultButtonProps> = ({
 }) => {
   const baseStyles =
     variant === "default"
-      ? "text-black bg-white rounded-md text-2xl font-semibold hover:bg-black hover:text-white hover:border hover:border-white transition-all duration-300 ease-in-out"
-      : "text-white bg-black rounded-md text-2xl font-semibold hover:text-black hover:bg-white hover:border hover:border-black transition-all duration-300 ease-in-out";
+      ? " font-secondary text-black bg-white rounded-md text-2xl font-semibold hover:bg-black hover:text-white hover:border hover:border-white transition-all duration-300 ease-in-out"
+      : " font-secondary text-white bg-black rounded-md text-2xl font-semibold hover:text-black hover:bg-white hover:border hover:border-black transition-all duration-300 ease-in-out";
 
   const sizeStyles =
     size === "large" ? "px-8 py-4 text-xl" : "px-4 py-2 text-base";

@@ -19,7 +19,7 @@ const ServicePage = () => {
         <img
           src={bannerImage}
           alt="Header Background"
-          className="w-full h-30 object-cover opacity-80"
+          className="w-full h-28 object-cover opacity-80"
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex items-center justify-center">

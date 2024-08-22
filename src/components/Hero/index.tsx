@@ -20,7 +20,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="absolute inset-0 flex flex-col items-center justify-between py-10 z-20">
+      <div className="absolute inset-0 flex flex-col items-center justify-between py-10 z-20 font-primary">
         <div className="flex flex-col items-center mt-10">
           <h1 className="text-white text-6xl font-bold text-shadow-xl mb-2">
             ISSAS
