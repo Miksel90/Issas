@@ -1,8 +1,12 @@
 import bannerImage from "../../assets/Images/IssasHero.webp";
+import { Helmet } from "react-helmet";
 
 const PersonvernPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center">
+      <Helmet>
+        <title>Personvern | ISSAS</title>
+      </Helmet>
       <div className="w-full text-white relative text-shadow-xl">
         <img
           src={bannerImage}

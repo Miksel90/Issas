@@ -1,6 +1,8 @@
+import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
 import bannerImage from "../../assets/Images/IssasHero.webp";
 import DefaultButton from "../../components/Buttons/DefaultButton";
+import AboutContainer from "../../components/Container/aboutContainer";
 
 const AboutPage = () => {
   const navigate = useNavigate();
@@ -11,6 +13,9 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center">
+      <Helmet>
+        <title>Om Oss | ISSAS</title>
+      </Helmet>
       <div className="w-full text-white relative text-shadow-xl">
         <img
           src={bannerImage}
@@ -19,15 +24,15 @@ const AboutPage = () => {
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-3xl font-bold">Om Oss</h1>
+          <h1 className="text-3xl font-bold font-primary">Om Oss</h1>
         </div>
       </div>
       <div className="container mx-auto px-4 py-8 flex flex-col">
-        <h2 className="text-xl md:text-3xl font-semibold mb-6 text-center whitespace-pre-line">
+        <h2 className="text-xl md:text-3xl font-semibold mb-6 text-center whitespace-pre-line font-primary">
           Hei, det er vi som er ISSAS,{"\n"}Din Profesjonelle Gulvlegger!
         </h2>
 
-        <p className="text-base md:text-lg text-gray-800 leading-relaxed mb-6">
+        <p className="text-base md:text-lg  leading-relaxed mb-6">
           Etablert i 1996, med fokus på gulvlegging har ISSAS vokst betydelig,
           og har med tiden formet seg til å bli en av landets fremste
           spesialister på gulv til butikker, kontorbygg og næringslokaler.
@@ -58,8 +63,9 @@ const AboutPage = () => {
         <p className="text-base md:text-lg text-gray-800 leading-relaxed mb-6">
           Hilsen Roald og Jonas
         </p>
+        <AboutContainer />
 
-        <div className="flex items-center justify-center mt-10">
+        <div className="flex items-center justify-start mt-10">
           <DefaultButton
             ariaLabel="Kontakt Oss"
             size="large"
@@ -70,20 +76,20 @@ const AboutPage = () => {
           </DefaultButton>
         </div>
         <div className="mt-10">
-          <h2 className="text-2xl font-semibold text-center mb-4">
+          <h2 className="text-2xl font-semibold text-start mb-4">
             VÅRE LEVERANDØRER
           </h2>
-          <div className="flex justify-center mt-10">
-            <ul className="list-none flex space-x-10 text-2xl">
-              <li className=" font-semibold">Tarkett</li>
+          <div className="flex mt-10">
+            <ul className="list-none flex flex-wrap justify-center gap-6 text-2xl">
+              <li className="font-semibold">Tarkett</li>
               <li className="font-semibold">Polyflor</li>
-              <li className=" font-semibold">Amtico</li>
+              <li className="font-semibold">Amtico</li>
               <li className="font-semibold">Ardex</li>
-              <li className=" font-semibold">Armstrong</li>
-              <li className=" font-semibold">Casco</li>
-              <li className=" font-semibold">Forbo</li>
+              <li className="font-semibold">Armstrong</li>
+              <li className="font-semibold">Casco</li>
+              <li className="font-semibold">Forbo</li>
               <li className="font-semibold">Gerflor</li>
-              <li className=" font-semibold">Interface</li>
+              <li className="font-semibold">Interface</li>
             </ul>
           </div>
         </div>

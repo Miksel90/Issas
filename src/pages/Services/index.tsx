@@ -2,6 +2,7 @@ import bannerImage from "../../assets/Images/IssasHero.webp";
 import DropdownItem from "../../components/Buttons/DropdownButton";
 import DefaultButton from "../../components/Buttons/DefaultButton";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const ServicePage = () => {
   const navigate = useNavigate();
@@ -11,6 +12,9 @@ const ServicePage = () => {
   };
   return (
     <div className="min-h-screen  flex flex-col items-center">
+      <Helmet>
+        <title>Tjenester | ISSAS</title>
+      </Helmet>
       <div className="w-full text-white relative text-shadow-xl">
         <img
           src={bannerImage}
@@ -19,11 +23,11 @@ const ServicePage = () => {
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-3xl font-bold">Tjenester</h1>
+          <h1 className="text-3xl font-bold font-primary">Tjenester</h1>
         </div>
       </div>
       <div className="container mx-auto px-4 py-8">
-        <h2 className="text-3xl font-semibold mb-6 text-center">
+        <h2 className="text-3xl font-semibold mb-6 text-center font-primary">
           Vi er Eksperter på Gulv
         </h2>
         <div className="w-full max-w-lg mx-auto flex flex-col gap-4 ">

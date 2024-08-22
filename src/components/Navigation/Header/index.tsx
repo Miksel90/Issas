@@ -63,7 +63,7 @@ const HeaderNavigation: React.FC = () => {
         ref={menuRef}
         className={`lg:flex lg:flex-row lg:static lg:w-auto lg:p-0 lg:shadow-none lg:bg-transparent bg-white md:rounded-md 
           ${isMenuOpen ? "block" : "hidden"}
-          absolute top-full right-0 xxs:-ml-14 md:ml-0 bg-primary transition-all duration-500 ease-in-out shadow-md text-xl text-black p-4 z-50`}
+          absolute top-full right-0 xxs:-ml-14 md:ml-0 bg-primary transition-all duration-500 ease-in-out shadow-md font-secondary text-xl text-black p-4 z-50`}
       >
         <li className="py-2 px-5">
           <Link to="/" className={isActivePage("/")}>

@@ -4,13 +4,13 @@ import { FaTruck } from "react-icons/fa";
 
 const AboutContainer = () => {
   return (
-    <div className="flex flex-col mb-4 gap-10 shadow-sm shadow-black p-10">
-      <h2 className="text-black text-2xl md:text-4xl  px-2 text-center">
+    <div className="flex flex-col mb-4 gap-10 justify-around p-2 mt-10">
+      {/* <h2 className="text-black text-2xl md:text-4xl  px-2 text-center">
         Alt du trenger til ditt prosjekt
-      </h2>
+      </h2> */}
 
       <div className="flex flex-col md:flex-row items-center justify-evenly gap-8">
-        <div className="flex flex-col items-center md:items-start justify-center gap-2 px-10">
+        <div className="flex flex-col items-center md:items-start justify-center gap-2">
           <div className="flex items-center gap-4">
             <FaHouse size={50} className="text-danger" />
             <p className="text-black text-2xl font-semibold">Vi tilbyr</p>

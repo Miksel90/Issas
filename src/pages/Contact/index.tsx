@@ -1,9 +1,13 @@
 import bannerImage from "../../assets/Images/IssasHero.webp";
 import ContactForm from "../../components/Forms/ContactForm";
+import { Helmet } from "react-helmet";
 
 const ContactPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center">
+      <Helmet>
+        <title>Kontakt | ISSAS</title>
+      </Helmet>
       <div className="w-full text-white relative text-shadow-xl">
         <img
           src={bannerImage}
@@ -12,7 +16,7 @@ const ContactPage: React.FC = () => {
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-3xl font-bold">Kontakt Oss</h1>
+          <h1 className="text-3xl font-bold font-primary">Kontakt Oss</h1>
         </div>
       </div>
       <div className=" mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-2 gap-8">

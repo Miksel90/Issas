@@ -1,9 +1,13 @@
 import bannerImage from "../../assets/Images/IssasHero.webp";
 import FacebookPage from "../../components/Container/facebookContainer";
+import { Helmet } from "react-helmet";
 
 const ProjectPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center">
+      <Helmet>
+        <title>Prosjekter | ISSAS</title>
+      </Helmet>
       <div className="w-full text-white relative text-shadow-xl">
         <img
           src={bannerImage}
@@ -12,10 +16,10 @@ const ProjectPage = () => {
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-3xl font-bold">Prosjekter</h1>
+          <h1 className="text-3xl font-bold font-primary">Prosjekter</h1>
         </div>
       </div>
-      <h2 className="text-3xl font-semibold mb-6 text-center lg:text-left p-4">
+      <h2 className="text-3xl font-semibold mb-6 text-center lg:text-left p-4 font-primary">
         Følg Oss På Sosiale Medier
       </h2>
       <div className="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-8">
