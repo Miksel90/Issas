@@ -25,7 +25,7 @@ const Hero = () => {
           <h1 className="text-white text-6xl font-bold text-shadow-xl mb-2">
             ISSAS
           </h1>
-          <p className="text-white text-3xl font-bold text-shadow-xl">
+          <p className="text-white text-3xl font-bold text-shadow-xl text-center">
             Din Profesjonelle Gulvlegger
           </p>
         </div>
