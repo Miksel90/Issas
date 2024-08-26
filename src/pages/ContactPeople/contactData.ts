@@ -30,7 +30,7 @@ export const people: Person[] = [
     name: "Gerd Stokkeland",
     title: "Økonomi Ansvarlig",
     phone: "+47 669 63 500",
-    email: "post@issas.no",
+    email: "Gerd@issas.no",
     image: image3,
   },
 ];

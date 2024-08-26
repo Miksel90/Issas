@@ -6,7 +6,7 @@ import { people } from "./contactData";
 
 const ContactPeoplePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center">
+    <div className=" font-primary flex flex-col items-center">
       <Helmet>
         <title>Kontaktpersoner | ISSAS</title>
       </Helmet>
@@ -32,7 +32,7 @@ const ContactPeoplePage: React.FC = () => {
             />
             <div className="mt-4">
               <h2 className="text-xl font-semibold">{person.name}</h2>
-              <p className="text-gray-600">{person.title}</p>
+              <p className="text-black font-medium">{person.title}</p>
               <div className="mt-4 flex items-center text-lg">
                 <IoPhonePortraitSharp className="h-5 w-5 mr-2" />
                 <span>{person.phone}</span>

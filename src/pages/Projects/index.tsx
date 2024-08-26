@@ -1,10 +1,11 @@
 import bannerImage from "../../assets/Images/IssasHero.webp";
 import FacebookPage from "../../components/Container/facebookContainer";
+import ImageGallery from "../../components/Gallery/ImageGallery";
 import { Helmet } from "react-helmet";
 
 const ProjectPage = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center">
+    <div className=" flex flex-col items-center">
       <Helmet>
         <title>Prosjekter | ISSAS</title>
       </Helmet>
@@ -19,19 +20,14 @@ const ProjectPage = () => {
           <h1 className="text-3xl font-bold font-primary">Prosjekter</h1>
         </div>
       </div>
-      <h2 className="text-3xl font-semibold mb-6 text-center lg:text-left p-4 font-primary">
-        Følg Oss På Sosiale Medier
+      <h2 className="text-3xl font-semibold  text-center lg:text-left p-2 md:p-4 font-primary">
+        Vi er stolte av våre prosjekter
       </h2>
-      <div className="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-8">
+      <div className=" md:container  px-4 grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-10 mb-10">
         <div>
-          {/* Placeholder for Image Gallery */}
-          <div className="image-gallery">
-            {/* Add your image gallery component or images here */}
-            <p>Image Gallery Placeholder</p>
-          </div>
+          <ImageGallery />
         </div>
-
-        <div className="flex justify-center">
+        <div className="px-10">
           <FacebookPage />
         </div>
       </div>

@@ -13,7 +13,7 @@ import ContactInfoContainer from "../../Container/contactInfoContainer";
  */
 const Footer = () => {
   return (
-    <footer className="bg-white font-sans shadow-md w-full bottom-0 p-1 text-black text-md md:text-md mt-1 border-t">
+    <footer className="bg-white font-primary shadow-md w-full bottom-0 p-1 text-black text-md md:text-md mt-1 border-t">
       <div className="bg-white p-4 rounded-sm">
         <div className="flex md:flex-row flex-col-reverse md:gap-8 justify-evenly items-center px-8">
           <img
@@ -27,7 +27,9 @@ const Footer = () => {
         </div>
         <div className=" flex justify-between px-8 mt-4">
           <p className="text-sm">
-            <p className="text-sm">ISSAS | Din Profesjonelle Gulvlegger</p>
+            <p className="text-sm font-primary">
+              ISSAS | Din Profesjonelle Gulvlegger
+            </p>
           </p>
           <Flag country="NO" size={30} />
         </div>

@@ -60,7 +60,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        primary: ['"Playfair Display"', "serif"],
+        primary: ['"Work Sans"', "sans-serif"],
         secondary: ['"Graduate"', "serif"],
       },
       textShadow: {

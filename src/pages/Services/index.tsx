@@ -26,7 +26,7 @@ const ServicePage = () => {
           <h1 className="text-3xl font-bold font-primary">Tjenester</h1>
         </div>
       </div>
-      <div className="container mx-auto px-4 py-8">
+      <div className="md:container mx-auto px-4 py-8">
         <h2 className="text-3xl font-semibold mb-6 text-center font-primary">
           Vi er Eksperter på Gulv
         </h2>

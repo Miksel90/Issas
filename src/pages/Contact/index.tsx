@@ -1,10 +1,17 @@
 import bannerImage from "../../assets/Images/IssasHero.webp";
 import ContactForm from "../../components/Forms/ContactForm";
+import DefaultButton from "../../components/Buttons/DefaultButton";
+import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 const ContactPage: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/contactPeople");
+  };
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center">
+    <div className="flex flex-col items-center font-primary">
       <Helmet>
         <title>Kontakt | ISSAS</title>
       </Helmet>
@@ -22,7 +29,7 @@ const ContactPage: React.FC = () => {
       <div className=" mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="space-y-4">
           <div>
-            <h2 className="text-2xl font-bold">ISSAS - Gulv</h2>
+            <h2 className="text-2xl font-bold">ISSAS GULV</h2>
             <p className="mt-2">
               <strong>Besøksadresse</strong>
               <br />
@@ -38,9 +45,11 @@ const ContactPage: React.FC = () => {
             </p>
           </div>
 
-          <button className="mt-6 px-4 py-2 bg-black text-white font-semibold rounded">
-            Kontaktpersoner
-          </button>
+          <div className="flex justify-start">
+            <DefaultButton variant="no-hover" onClick={handleClick}>
+              Kontaktpersoner
+            </DefaultButton>
+          </div>
 
           <p className="mt-6">
             Kjører du? Eller skal du levere vare? Da finner du oss ved
@@ -64,8 +73,6 @@ const ContactPage: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Right Column: Contact Form */}
         <div>
           <ContactForm />
         </div>

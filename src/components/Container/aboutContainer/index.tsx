@@ -9,7 +9,7 @@ const AboutContainer = () => {
         Alt du trenger til ditt prosjekt
       </h2> */}
 
-      <div className="flex flex-col md:flex-row items-center justify-evenly gap-8">
+      <div className="flex flex-col md:flex-row items-center justify-evenly gap-8 font-primary">
         <div className="flex flex-col items-center md:items-start justify-center gap-2">
           <div className="flex items-center gap-4">
             <FaHouse size={50} className="text-danger" />

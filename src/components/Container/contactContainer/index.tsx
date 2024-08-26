@@ -4,7 +4,7 @@ import MasterImage from "../../../assets/Images/mesterMerkeBlack.png";
 
 const ContactContainer = () => {
   return (
-    <div className="w-full hidden md:flex bg-black p-2 space-x-8 justify-evenly">
+    <div className="w-full hidden md:flex bg-black p-2 space-x-8 justify-evenly font-primary">
       <div className="flex items-center text-white text-xl">
         <IoMailSharp size={24} className="text-white mr-2" />
         <span>Post@issas.no</span>

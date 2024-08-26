@@ -13,10 +13,27 @@ const FacebookPage: React.FC = () => {
         "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0";
       fjs.parentNode?.insertBefore(js, fjs);
     })(document, "script", "facebook-jssdk");
+
+    const adjustFacebookWidth = () => {
+      const fbPage = document.querySelector<HTMLElement>(".fb-page");
+      if (fbPage) {
+        const width = window.innerWidth < 756 ? "300" : "500";
+        fbPage.setAttribute("data-width", width);
+        if (window.FB) {
+          window.FB.XFBML.parse();
+        }
+      }
+    };
+
+    adjustFacebookWidth();
+
+    return () => {
+      window.removeEventListener("resize", adjustFacebookWidth);
+    };
   }, []);
 
   return (
-    <div className="">
+    <div className="container flex justify-center">
       <div id="fb-root"></div>
       <div
         className="fb-page"

@@ -12,7 +12,7 @@ const AboutPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center">
+    <div className=" flex flex-col items-center font-primary">
       <Helmet>
         <title>Om Oss | ISSAS</title>
       </Helmet>
