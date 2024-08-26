@@ -23,15 +23,15 @@ const images: ImageData[] = [
     alt: "Image 1 description",
   },
   {
-    src: image1,
+    src: image2,
     alt: "Image 2 description",
   },
   {
-    src: image2,
+    src: image3,
     alt: "Image 3 description",
   },
   {
-    src: image3,
+    src: image4,
     alt: "Image 4 description",
   },
   {
