@@ -2,12 +2,12 @@
 import image1 from "../../assets/Images/dummyGerd.webp";
 import image2 from "../../assets/Images/dummyJonas.webp";
 import image3 from "../../assets/Images/dummyRoald.webp";
-import image4 from "../../assets/Images/IssasBG1.webp";
+import image4 from "../../assets/Images/IssasBg1.webp";
 import image5 from "../../assets/Images/IssasHero.webp";
 import image6 from "../../assets/Images/dummyGerd.webp";
 import image7 from "../../assets/Images/dummyJonas.webp";
 import image8 from "../../assets/Images/dummyRoald.webp";
-import image9 from "../../assets/Images/IssasBG1.webp";
+import image9 from "../../assets/Images/IssasBg1.webp";
 import image10 from "../../assets/Images/IssasHero.webp";
 
 // Define the ImageData interface
