@@ -27,9 +27,9 @@ const AboutPage = () => {
           <h1 className="text-3xl font-bold font-primary">Om Oss</h1>
         </div>
       </div>
-      <div className="container mx-auto px-4 py-8 flex flex-col">
+      <div className="md:container mx-auto px-4 py-8 flex flex-col">
         <h2 className="text-xl md:text-3xl font-semibold mb-6 text-center whitespace-pre-line font-primary">
-          Hei, det er vi som er ISSAS,{"\n"}Din Profesjonelle Gulvlegger!
+          Hei, det er vi som er ISSAS GULV,{"\n"}Din Profesjonelle Gulvlegger!
         </h2>
 
         <p className="text-base md:text-lg  leading-relaxed mb-6">
@@ -65,7 +65,7 @@ const AboutPage = () => {
         </p>
         <AboutContainer />
 
-        <div className="flex items-center justify-start mt-10">
+        <div className="flex items-center justify-center mt-10">
           <DefaultButton
             ariaLabel="Kontakt Oss"
             size="large"
@@ -74,24 +74,6 @@ const AboutPage = () => {
           >
             Kontakt Oss
           </DefaultButton>
-        </div>
-        <div className="mt-10">
-          <h2 className="text-2xl font-semibold text-start mb-4">
-            VÅRE LEVERANDØRER
-          </h2>
-          <div className="flex mt-10">
-            <ul className="list-none flex flex-wrap justify-center gap-6 text-2xl">
-              <li className="font-semibold">Tarkett</li>
-              <li className="font-semibold">Polyflor</li>
-              <li className="font-semibold">Amtico</li>
-              <li className="font-semibold">Ardex</li>
-              <li className="font-semibold">Armstrong</li>
-              <li className="font-semibold">Casco</li>
-              <li className="font-semibold">Forbo</li>
-              <li className="font-semibold">Gerflor</li>
-              <li className="font-semibold">Interface</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>

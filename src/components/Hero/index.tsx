@@ -22,8 +22,8 @@ const Hero = () => {
 
       <div className="absolute inset-0 flex flex-col items-center justify-between py-10 z-20 font-primary">
         <div className="flex flex-col items-center mt-10">
-          <h1 className="text-white text-6xl font-bold text-shadow-xl mb-2">
-            ISSAS
+          <h1 className="text-white text-6xl font-bold text-shadow-xl mb-2 text-center">
+            ISSAS GULV
           </h1>
           <p className="text-white text-3xl font-bold text-shadow-xl text-center">
             Din Profesjonelle Gulvlegger
@@ -33,7 +33,7 @@ const Hero = () => {
           <DefaultButton size="large" onClick={handleClick}>
             Kontakt Oss
           </DefaultButton>
-          <p className="text-white text-2xl text-shadow-xl">
+          <p className="text-white text-2xl text-shadow-xl text-wrap md:text-nowrap text-center px-4 md:px-0">
             Designgulv, Tepper, Parkett, Fliser og Flytesparkling
           </p>
         </div>

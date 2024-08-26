@@ -3,7 +3,6 @@ import ContactContainer from "../../components/Container/contactContainer";
 import Hero from "../../components/Hero";
 
 import ContactForm from "../../components/Forms/ContactForm";
-import ContactInfoContainer from "../../components/Container/contactInfoContainer";
 
 const HomePage = () => {
   return (
@@ -13,11 +12,8 @@ const HomePage = () => {
       </Helmet>
       <ContactContainer />
       <Hero />
-      <div className="grid grid-cols-1 md:grid-cols-2 p-4  gap-10 md:gap-5">
-        <div className="">
-          <ContactInfoContainer />
-        </div>
-        <div>
+      <div className="flex justify-center items-center p-8 ">
+        <div className="md:container">
           <ContactForm />
         </div>
       </div>

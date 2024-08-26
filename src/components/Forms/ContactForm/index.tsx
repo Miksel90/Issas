@@ -39,7 +39,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto  bg-grey text-white p-8 rounded-lg shadow-sm shadow-grey">
+    <div className=" mx-auto  bg-grey text-white p-8 rounded-lg shadow-sm shadow-grey">
       <h2 className="text-2xl font-bold text-center mb-6">Kontakt Oss</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-4">

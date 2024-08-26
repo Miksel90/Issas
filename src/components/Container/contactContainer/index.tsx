@@ -1,5 +1,6 @@
 import { IoPhonePortraitSharp } from "react-icons/io5";
 import { IoMailSharp } from "react-icons/io5";
+import MasterImage from "../../../assets/Images/mesterMerkeBlack.png";
 
 const ContactContainer = () => {
   return (
@@ -7,6 +8,9 @@ const ContactContainer = () => {
       <div className="flex items-center text-white text-xl">
         <IoMailSharp size={24} className="text-white mr-2" />
         <span>Post@issas.no</span>
+      </div>
+      <div className="flex items-center text-white text-xl">
+        <img src={MasterImage} alt="Mestermerket" className="w-18 h-16" />
       </div>
       <div className="flex items-center text-white text-xl">
         <IoPhonePortraitSharp size={24} className="text-white mr-2" />
