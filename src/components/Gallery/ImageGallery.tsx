@@ -55,7 +55,7 @@ const ImageGallery: React.FC = () => {
       <div className="absolute inset-y-0 left-0 flex items-center z-20">
         <button
           onClick={handlePrevious}
-          className="bg-white text-black text-xl font-bold p-1 rounded-full focus:outline-none bg-opacity-50"
+          className=" text-black text-xl font-bold p-1 rounded-full focus:outline-none bg-opacity-50"
         >
           &lt;
         </button>
@@ -63,7 +63,7 @@ const ImageGallery: React.FC = () => {
       <div className="absolute inset-y-0 right-0 flex items-center z-20">
         <button
           onClick={handleNext}
-          className="bg-white text-black text-xl font-bold p-1 rounded-full focus:outline-none bg-opacity-50"
+          className=" text-black text-xl font-bold p-1 rounded-full focus:outline-none bg-opacity-50"
         >
           &gt;
         </button>

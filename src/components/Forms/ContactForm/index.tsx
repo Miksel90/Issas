@@ -34,31 +34,23 @@ const ContactForm = () => {
     resolver: yupResolver(validationSchema),
   });
 
-  const onSubmit = async (data: any) => {
-    try {
-      const response = await fetch("http://localhost:5000/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+  const onSubmit = async (data: any, event: any) => {
+    // Log the validated data
+    console.log("Form data is valid:", data);
 
-      if (response.ok) {
-        alert("Email sent successfully!");
-      } else {
-        alert("Failed to send email.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred while sending the email.");
-    }
+    // Manually trigger the form submission
+    event.target.submit();
   };
 
   return (
-    <div className=" mx-auto  bg-grey text-white p-8 rounded-lg shadow-sm shadow-grey font-primary">
+    <div className="mx-auto bg-grey text-white p-8 rounded-lg shadow-sm shadow-grey font-primary">
       <h2 className="text-2xl font-bold text-center mb-6">Kontakt Oss</h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form
+        action="https://formsubmit.co/mikael.selstad@gmail.com" // Replace with your FormSubmit email or token
+        method="POST"
+        target="_blank"
+        onSubmit={handleSubmit(onSubmit)} // Validate and then submit
+      >
         <div className="mb-4">
           <input
             type="text"
@@ -83,7 +75,7 @@ const ContactForm = () => {
         </div>
         <div className="mb-4">
           <input
-            type="number"
+            type="text"
             placeholder="Telefonnummer"
             {...register("phoneNumber")}
             className="w-full p-2 rounded-md bg-white text-black"
@@ -112,6 +104,11 @@ const ContactForm = () => {
         {errors.privacy && (
           <p className="text-danger text-sm">{errors.privacy.message}</p>
         )}
+
+        {/* Hidden input fields for FormSubmit settings */}
+        <input type="hidden" name="_next" value="https://www.vg.no" />
+        <input type="hidden" name="_captcha" value="false" />
+
         <p className="text-white text-sm mb-4">
           Lagring skjer etter gjeldende lovverk. Les vår{" "}
           <a href="/personvern" className="underline text-personvern">

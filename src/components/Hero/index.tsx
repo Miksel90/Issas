@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import heroImage from "../../assets/Images/IssasHero.webp";
+import heroImage from "../../assets/Images/IssasHero2.webp";
 import DefaultButton from "../Buttons/DefaultButton";
 
 const Hero = () => {

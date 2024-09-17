@@ -60,8 +60,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        primary: ['"Work Sans"', "sans-serif"],
-        secondary: ['"Graduate"', "serif"],
+        primary: ['"Open Sans"', "sans-serif"],
+        secondary: ['"Open Sans"', "sans-serif"],
       },
       textShadow: {
         sm: "1px 1px 2px rgba(0, 0, 0, 0.5)",

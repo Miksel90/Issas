@@ -1,22 +1,20 @@
 // Import images
-import image1 from "../../assets/Images/dummyGerd.webp";
-import image2 from "../../assets/Images/dummyJonas.webp";
-import image3 from "../../assets/Images/dummyRoald.webp";
-import image4 from "../../assets/Images/IssasBg1.webp";
-import image5 from "../../assets/Images/IssasHero.webp";
-import image6 from "../../assets/Images/dummyGerd.webp";
-import image7 from "../../assets/Images/dummyJonas.webp";
-import image8 from "../../assets/Images/dummyRoald.webp";
-import image9 from "../../assets/Images/IssasBg1.webp";
-import image10 from "../../assets/Images/IssasHero.webp";
+import image1 from "../../assets/Images/Image1.webp";
+import image2 from "../../assets/Images/Image2.webp";
+import image3 from "../../assets/Images/Image3.webp";
+import image4 from "../../assets/Images/Image4.webp";
+import image5 from "../../assets/Images/Image5.webp";
+import image6 from "../../assets/Images/Image6.webp";
+import image7 from "../../assets/Images/Image7.webp";
+import image8 from "../../assets/Images/Image8.webp";
+import image9 from "../../assets/Images/Image9.webp";
+import image10 from "../../assets/Images/Image10.webp";
 
-// Define the ImageData interface
 interface ImageData {
   src: string;
   alt: string;
 }
 
-// Create an array of images that conforms to the ImageData interface
 const images: ImageData[] = [
   {
     src: image1,

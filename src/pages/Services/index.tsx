@@ -1,4 +1,4 @@
-import bannerImage from "../../assets/Images/IssasHero.webp";
+import bannerImage from "../../assets/Images/IssasHero2.webp";
 import DropdownItem from "../../components/Buttons/DropdownButton";
 import DefaultButton from "../../components/Buttons/DefaultButton";
 import { useNavigate } from "react-router-dom";

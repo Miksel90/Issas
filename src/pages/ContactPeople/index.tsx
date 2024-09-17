@@ -1,4 +1,4 @@
-import bannerImage from "../../assets/Images/IssasHero.webp";
+import bannerImage from "../../assets/Images/IssasHero2.webp";
 import { IoPhonePortraitSharp } from "react-icons/io5";
 import { IoMailSharp } from "react-icons/io5";
 import { Helmet } from "react-helmet";

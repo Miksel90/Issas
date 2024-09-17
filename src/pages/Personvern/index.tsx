@@ -1,4 +1,4 @@
-import bannerImage from "../../assets/Images/IssasHero.webp";
+import bannerImage from "../../assets/Images/IssasHero2.webp";
 import { Helmet } from "react-helmet";
 
 const PersonvernPage = () => {

@@ -1,4 +1,4 @@
-import bannerImage from "../../assets/Images/IssasHero.webp";
+import bannerImage from "../../assets/Images/IssasHero2.webp";
 import FacebookPage from "../../components/Container/facebookContainer";
 import ImageGallery from "../../components/Gallery/ImageGallery";
 import { Helmet } from "react-helmet";

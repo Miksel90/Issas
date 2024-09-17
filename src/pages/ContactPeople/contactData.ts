@@ -1,7 +1,6 @@
 // contactData.ts
 import image1 from "../../assets/Images/dummyRoald.webp";
 import image2 from "../../assets/Images/dummyJonas.webp";
-import image3 from "../../assets/Images/dummyGerd.webp";
 
 export interface Person {
   name: string;
@@ -21,16 +20,9 @@ export const people: Person[] = [
   },
   {
     name: "Jonas Selstad",
-    title: "Prosjekt leder",
+    title: "Prosjektleder",
     phone: "+47 97132023",
     email: "jonas@issas.no",
     image: image2,
-  },
-  {
-    name: "Gerd Stokkeland",
-    title: "Økonomi Ansvarlig",
-    phone: "+47 669 63 500",
-    email: "Gerd@issas.no",
-    image: image3,
   },
 ];

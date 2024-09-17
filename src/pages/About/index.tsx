@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
-import bannerImage from "../../assets/Images/IssasHero.webp";
+import bannerImage from "../../assets/Images/IssasHero2.webp";
 import DefaultButton from "../../components/Buttons/DefaultButton";
 import AboutContainer from "../../components/Container/aboutContainer";
 
