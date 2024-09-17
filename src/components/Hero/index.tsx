@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import heroImage from "../../assets/Images/IssasHero2.webp";
 import DefaultButton from "../Buttons/DefaultButton";
+import { useTranslator } from "../Translator"; // Import useTranslator
 
 const Hero = () => {
   const navigate = useNavigate();
+  const { translate } = useTranslator(); // Use the translate function
 
   const handleClick = () => {
     navigate("/contact");
@@ -26,15 +28,15 @@ const Hero = () => {
             ISSAS GULV
           </h1>
           <p className="text-white text-3xl font-bold text-shadow-xl text-center">
-            Din Profesjonelle Gulvlegger
+            {translate("Din Profesjonelle Gulvlegger")}
           </p>
         </div>
         <div className="flex flex-col items-center mb-5 gap-10">
           <DefaultButton size="large" onClick={handleClick}>
-            Kontakt Oss
+            {translate("Kontakt Oss")}
           </DefaultButton>
           <p className="text-white text-2xl text-shadow-xl text-wrap md:text-nowrap text-center px-4 md:px-0">
-            Designgulv, Tepper, Parkett, Fliser og Flytesparkling
+            {translate("Designgulv, Tepper, Parkett, Fliser og Flytesparkling")}
           </p>
         </div>
       </div>

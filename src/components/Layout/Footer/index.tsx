@@ -1,6 +1,7 @@
 import Logo from "../../../assets/Logo/Mestermerket.webp";
 import Flag from "react-flagkit";
 import ContactInfoContainer from "../../Container/contactInfoContainer";
+import { useTranslator } from "../../Translator";
 
 /**
  * Footer component that displays the footer section of the website.
@@ -12,6 +13,7 @@ import ContactInfoContainer from "../../Container/contactInfoContainer";
  * )
  */
 const Footer = () => {
+  const { language, toggleLanguage } = useTranslator();
   return (
     <footer className="bg-white font-primary shadow-md w-full bottom-0 p-1 text-black text-md md:text-md mt-1 border-t">
       <div className="bg-white p-4 rounded-sm">
@@ -31,7 +33,17 @@ const Footer = () => {
               ISSAS | Din Profesjonelle Gulvlegger
             </p>
           </p>
-          <Flag country="NO" size={30} />
+          <button
+            className="btn btn-white mt-1 bg-whi"
+            onClick={toggleLanguage}
+            aria-label="Change language"
+          >
+            {language === "en" ? (
+              <Flag country="NO" size={40} />
+            ) : (
+              <Flag country="GB" size={40} />
+            )}
+          </button>
         </div>
       </div>
     </footer>

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import HamburgerButton from "../../Buttons/Hamburger";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { useTranslator } from "../../Translator"; // Import useTranslator hook
 
 const HeaderNavigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -11,6 +12,8 @@ const HeaderNavigation: React.FC = () => {
   const dropdownRef = useRef<HTMLUListElement | null>(null);
 
   const location = useLocation();
+
+  const { translate } = useTranslator(); // Use the translate function from context
 
   const toggleMenu = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
@@ -50,9 +53,7 @@ const HeaderNavigation: React.FC = () => {
   }, [location.pathname]);
 
   const isActivePage = (path: string): string =>
-    location.pathname === path
-      ? "underline "
-      : "hover:underline hover:font-bold";
+    location.pathname === path ? "underline " : "";
 
   return (
     <nav className="bg-primary font-condensed w-full relative">
@@ -67,22 +68,22 @@ const HeaderNavigation: React.FC = () => {
       >
         <li className="py-2 px-5">
           <Link to="/" className={isActivePage("/")}>
-            Hjem
+            {translate("Hjem")}
           </Link>
         </li>
         <li className="py-2 px-5">
           <Link to="/services" className={isActivePage("/services")}>
-            Tjenester
+            {translate("Tjenester")}
           </Link>
         </li>
         <li className="py-2 px-5">
           <Link to="/projects" className={isActivePage("/projects")}>
-            Prosjekter
+            {translate("Prosjekter")}
           </Link>
         </li>
         <li className="py-2 px-5">
           <Link to="/about" className={isActivePage("/about")}>
-            Om Oss
+            {translate("Om Oss")}
           </Link>
         </li>
         <li className="relative py-2 px-5">
@@ -92,7 +93,7 @@ const HeaderNavigation: React.FC = () => {
             )}`}
             onClick={toggleDropdown}
           >
-            Kontakt
+            {translate("Kontakt")}
             <IoMdArrowDropdown />
           </button>
           <ul
@@ -104,10 +105,10 @@ const HeaderNavigation: React.FC = () => {
             }`}
           >
             <li className="py-2 px-4 hover:underline hover:font-bold">
-              <Link to="/contact">Kontakt Oss</Link>
+              <Link to="/contact">{translate("Kontakt Oss")}</Link>
             </li>
             <li className="py-2 px-4 hover:underline hover:font-bold">
-              <Link to="/contactPeople">Kontaktpersoner</Link>
+              <Link to="/contactPeople">{translate("Kontaktpersoner")}</Link>
             </li>
           </ul>
         </li>

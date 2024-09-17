@@ -11,6 +11,7 @@ import {
 } from "./pages";
 import Layout from "./components/Layout";
 import "./App.css";
+import Translator from "./components/Translator";
 
 /**
  * Root component of the application.
@@ -22,18 +23,20 @@ function App() {
   return (
     <div className="max-w-app mx-auto">
       <>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<HomePage />} />
-            <Route path="services" element={<ServicePage />} />
-            <Route path="projects" element={<ProjectPage />} />
-            <Route path="about" element={<AboutPage />} />
-            <Route path="contact" element={<ContactPage />} />
-            <Route path="contactPeople" element={<ContactPeoplePage />} />
-            <Route path="*" element={<NotFoundPage />} />
-            <Route path="personvern" element={<PersonvernPage />} />
-          </Route>
-        </Routes>
+        <Translator>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<HomePage />} />
+              <Route path="services" element={<ServicePage />} />
+              <Route path="projects" element={<ProjectPage />} />
+              <Route path="about" element={<AboutPage />} />
+              <Route path="contact" element={<ContactPage />} />
+              <Route path="contactPeople" element={<ContactPeoplePage />} />
+              <Route path="*" element={<NotFoundPage />} />
+              <Route path="personvern" element={<PersonvernPage />} />
+            </Route>
+          </Routes>
+        </Translator>
       </>
     </div>
   );
