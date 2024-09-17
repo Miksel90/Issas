@@ -1,9 +1,12 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
+import { useState } from "react";
 import DefaultButton from "../../Buttons/DefaultButton";
 
 const ContactForm = () => {
+  const [formSubmitted, setFormSubmitted] = useState(false); // Track if form is submitted
+
   const validationSchema = Yup.object().shape({
     name: Yup.string()
       .min(2, "Navn må være minst 2 tegn")
@@ -29,27 +32,34 @@ const ContactForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm({
     resolver: yupResolver(validationSchema),
+    mode: "onChange",
   });
 
   const onSubmit = async (data: any, event: any) => {
-    // Log the validated data
     console.log("Form data is valid:", data);
-
-    // Manually trigger the form submission
+    setFormSubmitted(true);
     event.target.submit();
   };
+
+  if (formSubmitted) {
+    return (
+      <p className="text-center text-4xl p-10">
+        Tusen takk for at du tar kontakt. Du hører fra oss!
+      </p>
+    );
+  }
 
   return (
     <div className="mx-auto bg-grey text-white p-8 rounded-lg shadow-sm shadow-grey font-primary">
       <h2 className="text-2xl font-bold text-center mb-6">Kontakt Oss</h2>
       <form
-        action="https://formsubmit.co/mikael.selstad@gmail.com" // Replace with your FormSubmit email or token
+        action="https://formsubmit.co/d4508af5612ce880ec4233ef611cf5dd"
         method="POST"
         target="_blank"
-        onSubmit={handleSubmit(onSubmit)} // Validate and then submit
+        onSubmit={handleSubmit(onSubmit)}
       >
         <div className="mb-4">
           <input
@@ -116,11 +126,13 @@ const ContactForm = () => {
           </a>
           .
         </p>
-        <div className="flex items-center justify-center mt-2">
-          <DefaultButton ariaLabel="Send" size="large">
-            Send
-          </DefaultButton>
-        </div>
+        {isValid && (
+          <div className="flex items-center justify-center mt-2">
+            <DefaultButton ariaLabel="Send" size="large">
+              Send
+            </DefaultButton>
+          </div>
+        )}
       </form>
     </div>
   );
