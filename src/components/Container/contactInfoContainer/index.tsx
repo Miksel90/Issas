@@ -1,6 +1,6 @@
 import { FaFacebook } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
-import { useTranslator } from "../../Translator";
+import { useTranslator } from "../../Translator/useTranslator";
 
 const ContactInfoContainer = () => {
   const { translate } = useTranslator();

@@ -3,11 +3,11 @@ import ContactForm from "../../components/Forms/ContactForm";
 import DefaultButton from "../../components/Buttons/DefaultButton";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { useTranslator } from "../../components/Translator"; // Import useTranslator
+import { useTranslator } from "../../components/Translator/useTranslator";
 
 const ContactPage: React.FC = () => {
   const navigate = useNavigate();
-  const { translate } = useTranslator(); // Use the translate function
+  const { translate } = useTranslator();
 
   const handleClick = () => {
     navigate("/contactPeople");

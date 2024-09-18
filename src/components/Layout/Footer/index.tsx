@@ -1,7 +1,7 @@
 import Logo from "../../../assets/Logo/Mestermerket.webp";
 import Flag from "react-flagkit";
 import ContactInfoContainer from "../../Container/contactInfoContainer";
-import { useTranslator } from "../../Translator";
+import { useTranslator } from "../../Translator/useTranslator";
 
 /**
  * Footer component that displays the footer section of the website.

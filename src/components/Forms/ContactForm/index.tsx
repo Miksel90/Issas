@@ -1,13 +1,21 @@
-import { useForm } from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { useState } from "react";
 import DefaultButton from "../../Buttons/DefaultButton";
-import { useTranslator } from "../../Translator"; // Import useTranslator
+import { useTranslator } from "../../Translator/useTranslator";
+
+interface ContactFormData {
+  name: string;
+  phoneNumber: string;
+  email: string;
+  message: string;
+  privacy?: boolean;
+}
 
 const ContactForm = () => {
-  const [formSubmitted, setFormSubmitted] = useState(false); // Track if form is submitted
-  const { translate } = useTranslator(); // Use the translate function from context
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const { translate } = useTranslator();
 
   const validationSchema = Yup.object().shape({
     name: Yup.string()
@@ -35,15 +43,17 @@ const ContactForm = () => {
     register,
     handleSubmit,
     formState: { errors, isValid },
-  } = useForm({
+  } = useForm<ContactFormData>({
     resolver: yupResolver(validationSchema),
     mode: "onChange",
   });
 
-  const onSubmit = async (data: any, event: any) => {
+  const onSubmit: SubmitHandler<ContactFormData> = async (data, event) => {
     console.log("Form data is valid:", data);
     setFormSubmitted(true);
-    event.target.submit();
+    if (event) {
+      event.target.submit();
+    }
   };
 
   if (formSubmitted) {
@@ -121,7 +131,6 @@ const ContactForm = () => {
         )}
 
         {/* Hidden input fields for FormSubmit settings */}
-        <input type="hidden" name="_next" value="https://www.vg.no" />
         <input type="hidden" name="_captcha" value="false" />
 
         <p className="text-white text-sm mb-4">

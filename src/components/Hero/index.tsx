@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import heroImage from "../../assets/Images/IssasHero2.webp";
 import DefaultButton from "../Buttons/DefaultButton";
-import { useTranslator } from "../Translator"; // Import useTranslator
+import { useTranslator } from "../Translator/useTranslator";
 
 const Hero = () => {
   const navigate = useNavigate();
-  const { translate } = useTranslator(); // Use the translate function
+  const { translate } = useTranslator();
 
   const handleClick = () => {
     navigate("/contact");
