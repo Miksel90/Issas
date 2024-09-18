@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import HamburgerButton from "../../Buttons/Hamburger";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { useTranslator } from "../../Translator"; // Import useTranslator hook
+import { useTranslator } from "../../Translator";
 
 const HeaderNavigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -13,7 +13,7 @@ const HeaderNavigation: React.FC = () => {
 
   const location = useLocation();
 
-  const { translate } = useTranslator(); // Use the translate function from context
+  const { translate } = useTranslator();
 
   const toggleMenu = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
@@ -104,10 +104,10 @@ const HeaderNavigation: React.FC = () => {
                 : "opacity-0 pointer-events-none"
             }`}
           >
-            <li className="py-2 px-4 hover:underline hover:font-bold">
+            <li className="py-2 px-4">
               <Link to="/contact">{translate("Kontakt Oss")}</Link>
             </li>
-            <li className="py-2 px-4 hover:underline hover:font-bold">
+            <li className="py-2 px-4">
               <Link to="/contactPeople">{translate("Kontaktpersoner")}</Link>
             </li>
           </ul>

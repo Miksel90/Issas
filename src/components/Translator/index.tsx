@@ -3,6 +3,13 @@ import navigationTranslations from "./Translations/navigasjon";
 import contactFormTranslations from "./Translations/kontaktskjema";
 import footerTranslations from "./Translations/footer";
 import heroTranslations from "./Translations/hero";
+import aboutPageTranslations from "./Translations/aboutPage";
+import aboutContainerTranslations from "./Translations/aboutContainer";
+import contactPageTranslations from "./Translations/contactPage";
+import contactPeopleTranslations from "./Translations/contactPeoplePage";
+import servicePageTranslations from "./Translations/servicePage";
+import projectPageTranslations from "./Translations/projectPage";
+import personvernPageTranslations from "./Translations/privacyPolicy";
 
 interface TranslatorContextType {
   language: string;
@@ -26,6 +33,13 @@ const Translator: React.FC<TranslatorProps> = ({ children }) => {
       ...contactFormTranslations,
       ...footerTranslations,
       ...heroTranslations,
+      ...aboutPageTranslations,
+      ...aboutContainerTranslations,
+      ...contactPageTranslations,
+      ...contactPeopleTranslations,
+      ...servicePageTranslations,
+      ...projectPageTranslations,
+      ...personvernPageTranslations,
     };
 
     return translations[text] ? translations[text][language] : text;

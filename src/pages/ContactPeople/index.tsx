@@ -3,22 +3,27 @@ import { IoPhonePortraitSharp } from "react-icons/io5";
 import { IoMailSharp } from "react-icons/io5";
 import { Helmet } from "react-helmet";
 import { people } from "./contactData";
+import { useTranslator } from "../../components/Translator";
 
 const ContactPeoplePage: React.FC = () => {
+  const { translate } = useTranslator();
+
   return (
-    <div className=" font-primary flex flex-col items-center">
+    <div className="font-primary flex flex-col items-center">
       <Helmet>
-        <title>Kontaktpersoner | ISSAS</title>
+        <title>{translate("Kontaktpersoner")} | ISSAS</title>
       </Helmet>
       <div className="w-full text-white relative text-shadow-xl">
         <img
           src={bannerImage}
-          alt="Header Background"
+          alt={translate("Header Background")}
           className="w-full h-28 object-cover opacity-80"
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-3xl font-bold font-primary">Kontaktpersoner</h1>
+          <h1 className="text-3xl font-bold font-primary">
+            {translate("Kontaktpersoner")}
+          </h1>
         </div>
       </div>
 
@@ -32,7 +37,9 @@ const ContactPeoplePage: React.FC = () => {
             />
             <div className="mt-4">
               <h2 className="text-xl font-semibold">{person.name}</h2>
-              <p className="text-black font-medium">{person.title}</p>
+              <p className="text-black font-medium">
+                {translate(person.title)}
+              </p>
               <div className="mt-4 flex items-center text-lg">
                 <IoPhonePortraitSharp className="h-5 w-5 mr-2" />
                 <span>{person.phone}</span>

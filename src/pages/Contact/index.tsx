@@ -3,41 +3,47 @@ import ContactForm from "../../components/Forms/ContactForm";
 import DefaultButton from "../../components/Buttons/DefaultButton";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useTranslator } from "../../components/Translator"; // Import useTranslator
 
 const ContactPage: React.FC = () => {
   const navigate = useNavigate();
+  const { translate } = useTranslator(); // Use the translate function
 
   const handleClick = () => {
     navigate("/contactPeople");
   };
+
   return (
     <div className="flex flex-col items-center font-primary">
       <Helmet>
-        <title>Kontakt | ISSAS</title>
+        <title>{translate("Kontakt")} | ISSAS</title>
       </Helmet>
       <div className="w-full text-white relative text-shadow-xl">
         <img
           src={bannerImage}
-          alt="Header Background"
+          alt={translate("Header Background")}
           className="w-full h-28 object-cover opacity-80"
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-3xl font-bold font-primary">Kontakt Oss</h1>
+          <h1 className="text-3xl font-bold font-primary">
+            {translate("Kontakt Oss")}
+          </h1>
         </div>
       </div>
-      <div className=" mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="space-y-4">
           <div>
-            <h2 className="text-2xl font-bold">ISSAS GULV</h2>
+            <h2 className="text-2xl font-bold">{translate("ISSAS GULV")}</h2>
             <p className="mt-2">
-              <strong>Besøksadresse</strong>
+              <strong>{translate("Besøksadresse")}</strong>
               <br />
-              Kveldroveien 1<br />
+              Kveldroveien 1
+              <br />
               1407 Vinterbro
             </p>
             <p className="mt-4">
-              <strong>Kontaktdetaljer</strong>
+              <strong>{translate("Kontaktdetaljer")}</strong>
               <br />
               Post@issas.no
               <br />
@@ -47,13 +53,14 @@ const ContactPage: React.FC = () => {
 
           <div className="flex justify-start">
             <DefaultButton variant="no-hover" onClick={handleClick}>
-              Kontaktpersoner
+              {translate("Kontaktpersoner")}
             </DefaultButton>
           </div>
 
           <p className="mt-6">
-            Kjører du? Eller skal du levere vare? Da finner du oss ved
-            Vinterbro.
+            {translate(
+              "Kjører du? Eller skal du levere vare? Da finner du oss ved Vinterbro."
+            )}
           </p>
 
           <div className="mt-4">
@@ -68,7 +75,7 @@ const ContactPage: React.FC = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Google Maps Location"
+                title={translate("Google Maps Location")}
               ></iframe>
             </div>
           </div>
