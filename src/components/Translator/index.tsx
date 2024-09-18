@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, ReactNode } from "react";
+import React, { createContext, useState, ReactNode } from "react";
 import navigationTranslations from "./Translations/navigasjon";
 import contactFormTranslations from "./Translations/kontaktskjema";
 import footerTranslations from "./Translations/footer";
@@ -10,15 +10,20 @@ import contactPeopleTranslations from "./Translations/contactPeoplePage";
 import servicePageTranslations from "./Translations/servicePage";
 import projectPageTranslations from "./Translations/projectPage";
 import personvernPageTranslations from "./Translations/privacyPolicy";
+import { useTranslator } from "./useTranslator";
 
-interface TranslatorContextType {
+// Define the shape of the translation context
+export interface TranslatorContextType {
   language: string;
   setLanguage: (language: string) => void;
   translate: (text: string) => string;
   toggleLanguage: () => void;
 }
 
-const TranslatorContext = createContext<TranslatorContextType | null>(null);
+// Create context with default values
+export const TranslatorContext = createContext<TranslatorContextType | null>(
+  null
+);
 
 interface TranslatorProps {
   children: ReactNode;
@@ -56,14 +61,6 @@ const Translator: React.FC<TranslatorProps> = ({ children }) => {
       {children}
     </TranslatorContext.Provider>
   );
-};
-
-export const useTranslator = (): TranslatorContextType => {
-  const context = useContext(TranslatorContext);
-  if (!context) {
-    throw new Error("useTranslator must be used within a TranslatorProvider");
-  }
-  return context;
 };
 
 export default Translator;

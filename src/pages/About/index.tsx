@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import bannerImage from "../../assets/Images/IssasHero2.webp";
 import DefaultButton from "../../components/Buttons/DefaultButton";
 import AboutContainer from "../../components/Container/aboutContainer";
-import { useTranslator } from "../../components/Translator";
+import { useTranslator } from "../../components/Translator/useTranslator";
 
 const AboutPage = () => {
   const navigate = useNavigate();

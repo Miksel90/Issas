@@ -3,7 +3,8 @@ import DropdownItem from "../../components/Buttons/DropdownButton";
 import DefaultButton from "../../components/Buttons/DefaultButton";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { useTranslator } from "../../components/Translator";
+import { useTranslator } from "../../components/Translator/useTranslator";
+
 const ServicePage = () => {
   const navigate = useNavigate();
   const { translate } = useTranslator();

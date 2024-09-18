@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import HamburgerButton from "../../Buttons/Hamburger";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { useTranslator } from "../../Translator";
+import { useTranslator } from "../../Translator/useTranslator";
 
 const HeaderNavigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);

@@ -1,7 +1,7 @@
 import { FaHouse } from "react-icons/fa6";
 import { FaInfoCircle } from "react-icons/fa";
 import { FaTruck } from "react-icons/fa";
-import { useTranslator } from "../../Translator";
+import { useTranslator } from "../../Translator/useTranslator";
 
 const AboutContainer = () => {
   const { translate } = useTranslator();

@@ -3,7 +3,7 @@ import { IoPhonePortraitSharp } from "react-icons/io5";
 import { IoMailSharp } from "react-icons/io5";
 import { Helmet } from "react-helmet";
 import { people } from "./contactData";
-import { useTranslator } from "../../components/Translator";
+import { useTranslator } from "../../components/Translator/useTranslator";
 
 const ContactPeoplePage: React.FC = () => {
   const { translate } = useTranslator();

@@ -1,6 +1,6 @@
 import bannerImage from "../../assets/Images/IssasHero2.webp";
 import { Helmet } from "react-helmet";
-import { useTranslator } from "../../components/Translator";
+import { useTranslator } from "../../components/Translator/useTranslator";
 
 const PersonvernPage = () => {
   const { translate } = useTranslator();
