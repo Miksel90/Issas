@@ -12,9 +12,9 @@ const AboutContainer = () => {
         <div className="flex flex-col items-center md:items-start justify-center gap-2">
           <div className="flex items-center gap-4">
             <FaHouse size={50} className="text-danger" />
-            <p className="text-black text-2xl font-semibold font-primary">
+            <h2 className="text-black text-2xl font-semibold font-primary">
               {translate("Vi tilbyr")}
-            </p>
+            </h2>
           </div>
           <p className="text-black md:w-64 text-lg text-center md:text-left">
             {translate(
@@ -26,9 +26,9 @@ const AboutContainer = () => {
         <div className="flex flex-col items-center md:items-start justify-center gap-2">
           <div className="flex items-center gap-4">
             <FaInfoCircle size={50} className="text-success" />
-            <p className="text-black text-2xl font-semibold font-primary">
+            <h2 className="text-black text-2xl font-semibold font-primary">
               {translate("Erfaring")}
-            </p>
+            </h2>
           </div>
           <p className="text-black md:w-64 text-lg text-center md:text-left">
             {translate(
@@ -40,9 +40,9 @@ const AboutContainer = () => {
         <div className="flex flex-col items-center md:items-start justify-center gap-2">
           <div className="flex items-center gap-4">
             <FaTruck size={50} className="text-info" />
-            <p className="text-black text-2xl font-semibold font-primary">
+            <h2 className="text-black text-2xl font-semibold font-primary">
               {translate("Nasjonalt")}
-            </p>
+            </h2>
           </div>
           <p className="text-black md:w-64 text-lg text-center md:text-left">
             {translate(

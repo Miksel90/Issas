@@ -76,7 +76,11 @@ const ContactForm = () => {
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="mb-4">
+          <label htmlFor="name" className="sr-only">
+            {translate("Navn")}
+          </label>
           <input
+            id="name"
             type="text"
             placeholder={translate("Navn")}
             {...register("name")}
@@ -87,7 +91,11 @@ const ContactForm = () => {
           )}
         </div>
         <div className="mb-4">
+          <label htmlFor="email" className="sr-only">
+            {translate("E-post")}
+          </label>
           <input
+            id="email"
             type="email"
             placeholder={translate("E-post")}
             {...register("email")}
@@ -98,7 +106,11 @@ const ContactForm = () => {
           )}
         </div>
         <div className="mb-4">
+          <label htmlFor="phoneNumber" className="sr-only">
+            {translate("Telefonnummer")}
+          </label>
           <input
+            id="phoneNumber"
             type="text"
             placeholder={translate("Telefonnummer")}
             {...register("phoneNumber")}
@@ -109,7 +121,11 @@ const ContactForm = () => {
           )}
         </div>
         <div className="mb-4">
+          <label htmlFor="message" className="sr-only">
+            {translate("Din Melding")}
+          </label>
           <textarea
+            id="message"
             placeholder={translate("Din Melding")}
             {...register("message")}
             className="w-full p-2 h-32 rounded-md bg-white text-black"
@@ -119,8 +135,13 @@ const ContactForm = () => {
           )}
         </div>
         <div className="mb-4 flex items-start">
-          <input type="checkbox" {...register("privacy")} className="mr-2" />
-          <label className="text-sm">
+          <input
+            type="checkbox"
+            id="privacy"
+            {...register("privacy")}
+            className="mr-2"
+          />
+          <label htmlFor="privacy" className="text-sm">
             {translate(
               "Jeg godtar at ISSAS lagrer opplysningene jeg har oppgitt i dette skjemaet."
             )}
