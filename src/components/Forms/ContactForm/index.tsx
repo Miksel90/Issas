@@ -64,13 +64,15 @@ const ContactForm = () => {
     );
   }
 
+  const formSubmitUrl = import.meta.env.VITE_FORM_SUBMIT_URL;
+
   return (
     <div className="mx-auto bg-grey text-white p-8 rounded-lg shadow-sm shadow-grey font-primary">
       <h2 className="text-2xl font-bold text-center mb-6">
         {translate("Kontakt Oss")}
       </h2>
       <form
-        action="https://formsubmit.co/d4508af5612ce880ec4233ef611cf5dd"
+        action={formSubmitUrl}
         method="POST"
         target="_blank"
         onSubmit={handleSubmit(onSubmit)}
@@ -90,6 +92,7 @@ const ContactForm = () => {
             <p className="text-danger text-sm">{errors.name.message}</p>
           )}
         </div>
+
         <div className="mb-4">
           <label htmlFor="email" className="sr-only">
             {translate("E-post")}
@@ -105,6 +108,7 @@ const ContactForm = () => {
             <p className="text-danger text-sm">{errors.email.message}</p>
           )}
         </div>
+
         <div className="mb-4">
           <label htmlFor="phoneNumber" className="sr-only">
             {translate("Telefonnummer")}
@@ -120,6 +124,7 @@ const ContactForm = () => {
             <p className="text-danger text-sm">{errors.phoneNumber.message}</p>
           )}
         </div>
+
         <div className="mb-4">
           <label htmlFor="message" className="sr-only">
             {translate("Din Melding")}
@@ -134,6 +139,7 @@ const ContactForm = () => {
             <p className="text-danger text-sm">{errors.message.message}</p>
           )}
         </div>
+
         <div className="mb-4 flex items-start">
           <input
             type="checkbox"
@@ -147,6 +153,7 @@ const ContactForm = () => {
             )}
           </label>
         </div>
+
         {errors.privacy && (
           <p className="text-danger text-sm">{errors.privacy.message}</p>
         )}
@@ -161,6 +168,7 @@ const ContactForm = () => {
           </a>
           .
         </p>
+
         {isValid && (
           <div className="flex items-center justify-center mt-2">
             <DefaultButton ariaLabel={translate("Send")} size="large">
