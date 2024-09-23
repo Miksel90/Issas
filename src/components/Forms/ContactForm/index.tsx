@@ -74,7 +74,6 @@ const ContactForm = () => {
       <form
         action={formSubmitUrl}
         method="POST"
-        target="_blank"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="mb-4">
