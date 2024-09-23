@@ -1,6 +1,6 @@
 // contactData.ts
-import image1 from "../../assets/Images/dummyRoald.webp";
-import image2 from "../../assets/Images/dummyJonas.webp";
+import image1 from "../../assets/Images/roaldProfil.webp";
+import image2 from "../../assets/Images/JonasProfil.webp";
 
 export interface Person {
   name: string;
