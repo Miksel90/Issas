@@ -10,9 +10,7 @@ import contactPeopleTranslations from "./Translations/contactPeoplePage";
 import servicePageTranslations from "./Translations/servicePage";
 import projectPageTranslations from "./Translations/projectPage";
 import personvernPageTranslations from "./Translations/privacyPolicy";
-import { useTranslator } from "./useTranslator";
 
-// Define the shape of the translation context
 export interface TranslatorContextType {
   language: string;
   setLanguage: (language: string) => void;
@@ -20,7 +18,6 @@ export interface TranslatorContextType {
   toggleLanguage: () => void;
 }
 
-// Create context with default values
 export const TranslatorContext = createContext<TranslatorContextType | null>(
   null
 );
@@ -30,7 +27,7 @@ interface TranslatorProps {
 }
 
 const Translator: React.FC<TranslatorProps> = ({ children }) => {
-  const [language, setLanguage] = useState<string>("en");
+  const [language, setLanguage] = useState<string>("no");
 
   const translate = (text: string): string => {
     const translations: Record<string, Record<string, string>> = {

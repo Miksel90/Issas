@@ -161,7 +161,7 @@ const ContactForm = () => {
         <input type="hidden" name="_captcha" value="false" />
 
         <p className="text-white text-sm mb-4">
-          {translate("Lagring skjer etter gjeldende lovverk. Les vår ")}{" "}
+          {translate("Lagring skjer etter gjeldende lovverk. Les vår")}{" "}
           <a href="/personvern" className="underline text-personvern">
             {translate("personvernerklæring")}
           </a>

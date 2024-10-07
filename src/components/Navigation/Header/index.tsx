@@ -56,7 +56,7 @@ const HeaderNavigation: React.FC = () => {
     location.pathname === path ? "underline " : "";
 
   return (
-    <nav className="bg-primary font-condensed w-full relative">
+    <nav className="bg-white font-condensed w-full relative">
       <div className="lg:hidden relative z-50">
         <HamburgerButton isMenuOpen={isMenuOpen} onClick={toggleMenu} />
       </div>

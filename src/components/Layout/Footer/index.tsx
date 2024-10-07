@@ -27,7 +27,7 @@ const Footer = () => {
             <ContactInfoContainer />
           </div>
         </div>
-        <div className=" flex justify-between px-8 mt-4">
+        <div className=" flex justify-between items-center px-8 mt-4">
           <p className="text-sm">
             <p className="text-sm font-primary">
               ISSAS | Din Profesjonelle Gulvlegger
